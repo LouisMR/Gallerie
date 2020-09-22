@@ -1,0 +1,96 @@
+body {
+    background-image: radial-gradient(circle at top left, white, green);
+    margin: 0;
+}
+
+.loading {
+    display: none;
+}
+
+.grosseImage {
+    margin-left: 460px;
+    margin-top: 110px;
+}
+
+.imageActive {
+    display: block;
+    width: 1000px;
+    height: 500px;
+}
+
+.isActive img {
+    opacity: 1
+}
+
+.loading {
+    display: block;
+    width: 1000px;
+    height: 500px;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    align-content: center;
+    float: left;
+    width: 1625px;
+    margin-top: 100px;
+    margin-left: 130px;
+    overflow: hidden;
+}
+
+.thumbnail {
+    flex-direction: column;
+}
+
+.thumbnail :hover {
+    border: 2px solid black
+}
+
+.image {
+    display: block;
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 100px;
+    opacity: 0.4;
+}
+
+.control {
+    position: absolute;
+    z-index: -2;
+    margin-top: 120px;
+    width: 100%;
+    height: 80px;
+}
+
+.control p {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  
+  .control  p:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+    float: left;
+    margin-left: 40px;
+  }
+  
+  .next {
+    background-color: #f1f1f1;
+    color: black;
+    float: right;
+    margin-right: 60px;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }

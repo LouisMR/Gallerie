@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css">
+    <title>TP2</title>
+</head>
+<body>
+    <div id="app">
+        <div class="grosseImage">
+            <img v-cloak class="loading" id="loading" v-show="isLoading" :src="gifLoad">
+            <img v-cloak class="imageActive" id="imageActive" v-show="!isLoading" :src="active">
+            <div class="description">
+                <p class="titre" id="titre"><strong>Titre: {{ titre }}</strong></p>
+                <p class="auteur" id="auteur"><strong>Auteur: {{ auteur }}</strong></p>
+                <p class="liens" id="liens"><strong><a :href="liens">Lien Original</strong></p></a>
+            </div>
+        </div>
+        <div class="control">
+            <p class="previous round" @click="precedent()">&#8249;</p>
+            <p class="next round" @click="suivant()">&#8250;</p>
+        </div>
+        <footer>
+            <div class="thumbnail" :class="{isActive: index === isActive}" :style="style" v-for="(thumbnail, index) in thumbnails" :key="index">
+                <img class="image" :src="thumbnail[0]" @click="load(), toggleClass(index), active = thumbnail[3], titre = thumbnail[1], auteur = thumbnail[2], liens = thumbnail[3]">
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
